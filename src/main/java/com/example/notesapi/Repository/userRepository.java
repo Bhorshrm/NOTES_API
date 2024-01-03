@@ -1,9 +1,11 @@
 package com.example.notesapi.Repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.Optional;
+import com.example.notesapi.Model.User;
+import org.springframework.data.jpa.repository.JpaRepository;  
 
-public interface userRepository extends JpaRepository<String,id>  {
-    
+    ic interface userRepository extends JpaRepository
+
     Optional<User> findById(@PathVariable String id);
     
 }

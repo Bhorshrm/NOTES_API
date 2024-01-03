@@ -17,7 +17,6 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NotEmpty
-
     private String uid;
 
     private String username;
@@ -25,5 +24,7 @@ public class User {
     private String password;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Note> notes;
+    private List<Notes> notes;
+
+
 }
